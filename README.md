@@ -6,7 +6,7 @@ A server that allows communication between the `SearchYT` SiriShortcut and the s
 - npm
 
 # Setup
-After downloading, open terminal and navigate to the project folder. Assuming you have npm/node set up already:
+After downloading, open terminal and navigate to `/searchYTServer` project folder. Assuming you have npm/node set up already:
 ```bash
   npm install .
 ```
