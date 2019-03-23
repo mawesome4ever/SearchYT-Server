@@ -19,7 +19,7 @@ then run `node server.js` to run the server, you'll see a message saying "You ar
 
 To run on the Raspberrypi refer to https://github.com/GoogleChrome/puppeteer/issues/550 for fixes.
 
-But what i did was first in the `/searchYTServer/app/routes/apis.js`file scroll down to where it uses the pupeteer variable, where it launches shoudld look something like `pup.launch()` and inside the paranthesis place `{headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox'],executablePath: '/usr/bin/chromium-browser'}`, now exit and save. After that, make sure to enter be super user by entering `super su` then run
+But what i did was first in the `/searchYTServer/app/routes/apis.js`file scroll down to where it uses the pupeteer variable, where it launches should look something like `pup.launch()` and inside the paranthesis place `{headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox'],executablePath: '/usr/bin/chromium-browser'}`, now exit and save. After that, make sure to enter super user by entering `super su` then run
 ```bash
 sudo apt-get update && apt-get install chromium-browser
 ```
