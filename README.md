@@ -14,7 +14,8 @@ then run `node server.js` to run the server, you'll see a message saying "You ar
 <p align="center">
   <img src="https://github.com/mawesome4ever/Dependancies/blob/master/ipShortcuts.jpeg" width="350" title="Set Ip In Shortcuts">
 </p>
-# RunningOnPi
+
+# Running On Pi
 
 To run on the Raspberrypi refer to https://github.com/GoogleChrome/puppeteer/issues/550 for fixes.
 
