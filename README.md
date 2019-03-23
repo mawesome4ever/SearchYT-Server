@@ -14,4 +14,12 @@ then run `node server.js` to run the server, you'll see a message saying "You ar
 <p align="center">
   <img src="https://github.com/mawesome4ever/Dependancies/blob/master/ipShortcuts.jpeg" width="350" title="Set Ip In Shortcuts">
 </p>
-to run on the Raspberrypi refer to https://github.com/GoogleChrome/puppeteer/issues/550 for fixes.
+# RunningOnPi
+
+To run on the Raspberrypi refer to https://github.com/GoogleChrome/puppeteer/issues/550 for fixes.
+
+But what i did was first in the `/searchYTServer/routes/apis/apis.js`file change `require("pupeteer");` to `require("pupeteer-core")` then scroll down to where it uses the pupeteer variable, where it launches shoudld look something like `pup.launch()` and inside the paranthesis place `{headless: true,args: ['--no-sandbox', '--disable-setuid-sandbox'],executablePath: '/usr/bin/chromium-browser'}`, now exit and save. After that, make sure to enter be super user by entering `super su` then run
+```bash
+sudo apt-get update && apt-get install chromium-browser
+```
+once it finishes downloading the armv version of chrome for the Pi, you can exit by typing `exit` and then running the server with `node server.js`. Enjoy!
